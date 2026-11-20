@@ -3,8 +3,8 @@ export const profile = {
   title: "Software Engineer · Full-Stack Developer",
   intro: "I build thoughtful software that makes complex problems feel simple — from polished interfaces to practical applications with real utility.",
   links: {
-    github: "https://github.com/your-github-username",
-    linkedin: "https://www.linkedin.com/in/your-linkedin-profile",
+    github: "https://github.com/gsk718/",
+    linkedin: "https://www.linkedin.com/in/gaurav-kumar187/",
     resume: "/resume.pdf",
     email: "mailto:your.email@example.com",
   },
@@ -39,7 +39,6 @@ export const skills = {
 
 export const education = [
   { school: "Arizona State University", degree: "B.S. Applied Computing, Computer Science", date: "June 2024" },
-  { school: "De Anza College", degree: "Associate-level studies, Computer and Information Sciences", date: "June 2019" },
 ];
 
 // Add verified roles here as experience is available.
