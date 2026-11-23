@@ -6,7 +6,7 @@ export const profile = {
     github: "https://github.com/gsk718/",
     linkedin: "https://www.linkedin.com/in/gaurav-kumar187/",
     resume: "/resume.pdf",
-    email: "mailto:your.email@example.com",
+    email: "mailto:gauravsk187@gmail.com",
   },
 };
 
