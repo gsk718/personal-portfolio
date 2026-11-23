@@ -12,22 +12,24 @@ export const profile = {
 
 export const alphaWatch = {
   name: "AlphaWatch",
-  eyebrow: "Featured project · Market analysis",
-  description: "A stock market analysis application designed to help users explore performance, understand market trends, and interpret technical indicators.",
-  github: "https://github.com/your-github-username/alphawatch",
-  demo: "#",
-  technologies: ["Python", "yfinance", "Pandas", "Plotly", "OpenAI API"],
+  eyebrow: "Featured project · Full-stack stock analysis",
+  description: "A full-stack stock analysis platform built with a React and TypeScript frontend, a Python REST API, and PostgreSQL persistence. Deployed in production with Vercel, Render, and Supabase.",
+  github: "https://github.com/gsk718/AlphaWatch",
+  demo: "https://alphawatch.gauravdevport.com",
+  technologies: ["React", "TypeScript", "Vite", "Python", "FastAPI", "REST API", "PostgreSQL", "Vercel", "Render", "Supabase"],
+  screenshots: [
+    { src: "/assets/alphawatch/screenshot-1.png", alt: "AlphaWatch market overview with stock analysis, rankings, and activity history", label: "Market overview" },
+    { src: "/assets/alphawatch/screenshot-2.png", alt: "AlphaWatch stock analysis screen", label: "Stock analysis" },
+    { src: "/assets/alphawatch/screenshot-3.png", alt: "AlphaWatch stock rankings screen", label: "Stock rankings" },
+    { src: "/assets/alphawatch/screenshot-4.png", alt: "AlphaWatch backtesting screen", label: "Backtesting" },
+  ],
   features: [
-    "Stock price and performance analysis using market data from yfinance",
-    "Technical indicators including MA5, MA20, and RSI",
-    "Buy / Sell / Hold analysis to help interpret indicator signals",
-    "Interactive charting with Plotly",
+    "Stock analysis and technical indicators",
+    "Stock rankings",
+    "Historical backtesting",
+    "Analysis history and backtest history",
   ],
-  architecture: "The confirmed technology list includes Python, yfinance, Pandas, Plotly, and the OpenAI API. The available project information does not specify component boundaries or data flow, so this page describes the stack without assigning roles beyond the listed tools.",
-  challenges: [
-    { title: "Presenting multiple market signals", body: "The confirmed feature set includes MA5, MA20, and RSI for analyzing stock performance and market trends." },
-    { title: "Making stock trends visible", body: "Plotly is part of the confirmed technology stack for the application's market analysis experience." },
-  ],
+  architecture: "The React, TypeScript, and Vite frontend communicates with a Python backend built with FastAPI through REST APIs. PostgreSQL provides persistent storage through Supabase. The frontend is deployed on Vercel and the backend on Render.",
 };
 
 export const skills = {
