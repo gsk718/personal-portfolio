@@ -3,10 +3,10 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Gaurav Kumar — Software Engineer",
-  description: "Gaurav Kumar is a software engineer and full-stack developer who builds thoughtful software and practical applications.",
+  description: "Gaurav Kumar is a software engineer and full-stack developer building applications, backend systems, and software products.",
   openGraph: {
     title: "Gaurav Kumar — Software Engineer",
-    description: "Thoughtful software. Practical applications.",
+    description: "Full-stack applications, backend systems, and software products by Gaurav Kumar.",
     type: "website",
   },
 };
