@@ -26,3 +26,27 @@
 .hero-portrait{position:relative;justify-self:end;width:min(100%,400px);aspect-ratio:4/5;max-height:440px;margin-bottom:27px;overflow:hidden;border:1px solid #313b33;background:#111613}
 .hero-portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 34%}
 @media(max-width:620px){.hero{align-items:stretch}.hero-portrait{justify-self:stretch;width:100%;max-height:460px;margin-bottom:0}}
+
+.series-project .series-visual{position:relative;min-height:360px;overflow:hidden;transition:border-color .2s}
+.series-project .series-visual:hover{border-color:#67806b}
+.series-thumbnail{object-fit:contain;background:#0b0e0c}
+.series-preview-empty{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:center;align-items:flex-start;padding:clamp(25px,5vw,55px);background:radial-gradient(ellipse at 74% 38%,#25352a 0,#172019 30%,#111613 72%);color:#dce5dd}
+.series-preview-mark{font-size:24px;font-weight:700;letter-spacing:-1.5px}
+.series-preview-mark span{color:var(--green)}
+.series-preview-empty>span:nth-child(2),.series-preview-foot{font:8px var(--mono);letter-spacing:.1em;color:#8d9a8f}
+.series-preview-empty strong{font-size:clamp(28px,4vw,44px);line-height:1.07;letter-spacing:-.06em;font-weight:500;margin-top:24px}
+.series-preview-empty strong em{font-family:Georgia,serif;font-weight:400;color:var(--green)}
+.series-preview-foot{margin-top:35px}
+.series-card-links{display:flex;gap:19px;margin-top:23px}
+.series-card-links a{font-size:11px;color:#c0c8c1}
+.series-card-links a:hover{color:var(--green)}
+.series-local-note{font-size:10px;color:var(--muted)}
+.series-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+.series-gallery .screenshot-card img{aspect-ratio:auto;object-fit:contain}
+.series-screenshot{height:auto;aspect-ratio:9/16;position:relative}
+.series-screenshot img{object-fit:contain}
+.series-gallery-empty{min-height:135px;display:flex;flex-direction:column;justify-content:center;padding:22px;border:1px solid var(--line);background:var(--surface);margin-bottom:75px}
+.series-gallery-empty p{max-width:650px;color:var(--muted);font-size:12px;margin:12px 0 0}
+.series-gallery-empty code{font:11px var(--mono);color:#bdc8bf}
+@media(max-width:850px){.series-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.series-project .series-visual{min-height:300px}.series-gallery{grid-template-columns:1fr}.series-screenshot{aspect-ratio:9/16}.series-gallery-empty{margin-bottom:51px}.series-local-note{font-size:9px}}

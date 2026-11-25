@@ -76,10 +76,11 @@ export function HomePage() {
         </article>
 
         <article className="series-project">
-          <div className="series-visual" aria-label="Series mobile application, visual preview coming soon">
-            <div className="phone-frame"><div className="phone-island"/><span className="series-wordmark">series<span>.</span></span><div className="series-rule"/><p>YOUR NEXT<br/>FAVORITE<br/><em>STORY.</em></p><span className="series-note">DISCOVER · SAVE · KEEP TRACK</span><div className="series-screen-footer">FILM & TELEVISION / MOBILE</div></div>
-          </div>
-          <div className="series-copy"><p className="eyebrow">MOBILE · IN DEVELOPMENT</p><h3>{series.name}<span>02</span></h3><p>{series.description}</p><p className="private-note">Private repository · No public deployment</p><span className="meta-label">TECHNOLOGY</span><div className="tag-list">{series.technologies.map((tech) => <span key={tech}>{tech}</span>)}</div></div>
+          <Link href="/projects/series" className="series-visual" aria-label="Explore Series project details">
+            {series.screenshots[0] ? <Image src={series.screenshots[0].src} alt={series.screenshots[0].alt} fill sizes="(max-width: 620px) 100vw, 40vw" className="series-thumbnail" /> : <span className="series-preview-empty"><span className="series-preview-mark">S<span>.</span></span><span>TV & FILM · MOBILE APP</span><strong>Discover your<br /><em>next story.</em></strong><span className="series-preview-foot">APP SCREENSHOTS COMING SOON</span></span>}
+            <span className="image-cue">VIEW PROJECT <Arrow diagonal /></span>
+          </Link>
+          <div className="series-copy"><p className="eyebrow">MOBILE · EXPO DEVELOPMENT</p><h3>{series.name}<span>02</span></h3><p>{series.description}</p><p className="private-note">Runs locally through Expo · No public demo</p><span className="meta-label">TECHNOLOGY</span><div className="tag-list">{series.technologies.map((tech) => <span key={tech}>{tech}</span>)}</div><div className="series-card-links"><Link href="/projects/series">Case study <Arrow diagonal /></Link><a href={series.github} target="_blank" rel="noreferrer">GitHub <Arrow diagonal /></a></div></div>
         </article>
       </section>
 
@@ -101,5 +102,15 @@ export function AlphaWatchPage() {
     <div className="screenshot-gallery">{alphaWatch.screenshots.map((screenshot, index) => <figure className="screenshot-card" key={screenshot.src}><a className="screenshot-full" href={screenshot.src} target="_blank" rel="noreferrer" aria-label={`Open full-size screenshot: ${screenshot.label}`}><Image src={screenshot.src} alt={screenshot.alt} width={3300} height={1756} loading="lazy" sizes="(max-width: 700px) 100vw, 50vw"/><span>OPEN FULL SIZE ↗</span></a><figcaption><span>0{index + 1}</span>{screenshot.label}</figcaption></figure>)}</div>
     <div className="detail-grid"><section><span className="eyebrow">CAPABILITIES</span><h2>What it does</h2><ul className="detail-list">{alphaWatch.features.map((item) => <li key={item}>{item}</li>)}</ul></section><section><span className="eyebrow">TECHNOLOGY</span><h2>Built and deployed</h2><p className="architecture-copy">{alphaWatch.architecture}</p><div className="tag-list">{alphaWatch.technologies.map((tech) => <span key={tech}>{tech}</span>)}</div></section></div>
     <div className="detail-end"><span>PRODUCTION · VERCEL / RENDER / SUPABASE</span><Link href="/#projects">Back to projects <Arrow /></Link></div>
+  </div></main><Footer /></>;
+}
+
+export function SeriesPage() {
+  return <><Header /><main className="detail-page"><div className="section-shell">
+    <div className="breadcrumb"><Link href="/#projects">PROJECTS</Link><span>/</span><b>SERIES</b></div>
+    <div className="detail-hero"><span className="eyebrow">{series.eyebrow}</span><h1>Series<span>.</span></h1><p>{series.description}</p><div className="detail-actions"><a className="button button-primary" href={series.github} target="_blank" rel="noreferrer">GitHub <Arrow diagonal /></a><span className="series-local-note">Runs locally through Expo</span></div></div>
+    {series.screenshots.length > 0 ? <div className="screenshot-gallery series-gallery">{series.screenshots.map((screenshot, index) => <figure className="screenshot-card" key={screenshot.src}><a className="screenshot-full series-screenshot" href={screenshot.src} target="_blank" rel="noreferrer" aria-label={`Open full-size screenshot: ${screenshot.label}`}><Image src={screenshot.src} alt={screenshot.alt} fill sizes="(max-width: 700px) 100vw, 33vw" /></a><figcaption><span>0{index + 1}</span>{screenshot.label}</figcaption></figure>)}</div> : <div className="series-gallery-empty"><span className="eyebrow">SCREENSHOTS</span><p>Add Series app screenshots to <code>public/images/series/</code> and list them in the project data to display them here.</p></div>}
+    <div className="detail-grid"><section><span className="eyebrow">CAPABILITIES</span><h2>What it does</h2><ul className="detail-list">{series.features.map((item) => <li key={item}>{item}</li>)}</ul></section><section><span className="eyebrow">TECHNOLOGY</span><h2>Application architecture</h2><p className="architecture-copy">{series.architecture}</p><div className="tag-list">{series.technologies.map((tech) => <span key={tech}>{tech}</span>)}</div></section></div>
+    <div className="detail-end"><span>LOCAL DEVELOPMENT · EXPO / SUPABASE</span><Link href="/#projects">Back to projects <Arrow /></Link></div>
   </div></main><Footer /></>;
 }

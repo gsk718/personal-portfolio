@@ -43,7 +43,20 @@ export const skills = {
 
 export const series = {
   name: "Series",
-  description: "A mobile app for discovering and tracking movies and television shows.",
+  eyebrow: "Mobile project · Film & television discovery",
+  description: "A mobile application for discovering TV shows and movies, then keeping track of what you want to watch. Built with React Native and Expo, with TMDB providing entertainment data and Supabase-backed PostgreSQL handling persistent app data with Row Level Security.",
+  github: "https://github.com/gsk718/qlyp",
+  screenshots: [
+    { src: "/assets/series/series-discovery.png", alt: "Series home screen featuring a featured series and an Up Next carousel", label: "Series discovery" },
+    { src: "/assets/series/title-details.png", alt: "Series title page with a video preview and actions to like, save, rate, view information, or share", label: "Title details" },
+    { src: "/assets/series/profile-activity.png", alt: "Series profile activity with watch ratings and reviews", label: "Profile activity" },
+  ] as { src: string; alt: string; label: string }[],
+  features: [
+    "Discover TV shows and movies using information from TMDB",
+    "Track shows and movies in a personal collection",
+    "Persist application data with PostgreSQL and Supabase Row Level Security",
+  ],
+  architecture: "The React Native application is built with Expo for local development and uses TypeScript for its application code. It connects to TMDB for TV and movie information. Supabase provides the data service backed by PostgreSQL, where Row Level Security policies control access to persisted records. The app currently runs locally through Expo and does not have a public deployment.",
   technologies: ["React Native", "Expo", "TypeScript", "Supabase", "PostgreSQL", "TMDB API"],
 };
 
